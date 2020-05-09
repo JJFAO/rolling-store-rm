@@ -1,44 +1,68 @@
 :root {
-  --background: #0F1626;
-  --secondary: #AB987A;
+  --background: #AB987A;
+  --secondary: #0F1626;
   --details: #FF533D;
   --text: #F5F5F5;
+  --test1: red;
+  --test2: blue;
+  --test3: yellow;
 }
-.App {
-  text-align: center;
-}
-
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
+.App-container {
   background-color: var(--background);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: var(--text);
 }
-
+.logo {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: left;
+}
+.greetings {
+  width: 120px;
+  height: 31px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 16px 28px 16px 0;
+  float: right;
+}
 .App-link {
   color: var(--details);
 }
+.header{
+  color: var(--text) !important;
+}
+.header-logo{
+  height: 60px;
+  cursor: pointer !important;
+}
+.header-search{
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-greetings{
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+}
+.content {
+  background-color: var(--background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.footer {
+  color: var(--text) !important;
+  background-color: var(--details) !important;
 }
