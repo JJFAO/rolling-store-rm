@@ -1,37 +1,37 @@
-import React, { Component } from 'react';
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 import { connect } from "react-redux";
 import { checkout } from "../actions";
-import { 
+import {
   getTotal,
   getCartProducts,
   getInfoCustomer,
   getInfoShippingAddress,
-  getInfoCreditCard
+  getInfoCreditCard,
 } from "../reducers";
-import { Layout, Row, Col} from 'antd';
-import ProductsInCart from '../components/ProductsInCart';
-import CartDetails from '../components/CartDetails';
-import { Link } from 'react-router-dom'
+import { Layout, Row, Col } from "antd";
+import ProductsInCart from "../components/ProductsInCart";
+import CartDetails from "../components/CartDetails";
+import { Link } from "react-router-dom";
 
 class Cart extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      creditCard: '',
-      shippingAddress: ''
-    }
+      creditCard: "",
+      shippingAddress: "",
+    };
   }
 
   render() {
-    const { customer, shippingAddress, creditCard, products } = this.props
-    
-    return(
+    const { customer, shippingAddress, creditCard, products } = this.props;
+
+    return (
       <Layout>
-        <Link to={{ pathname: "/" }}>
-            ¿Seguir comprando? Volver a la tienda
+        <div className="cart">
+          <Link to={{ pathname: "/" }}>
+            <p style={{color: "var(--title)", fontSize:"1rem", margin:"1rem"}}>¿Seguir comprando? Volver a la tienda</p>
           </Link>
-          <p> Carrito de: {customer} </p>
           <Row>
             <Col xs={{ span: 24 }} lg={{ span: 12 }}>
               <ProductsInCart products={products} />
@@ -41,33 +41,32 @@ class Cart extends Component {
                 shippingAddress={shippingAddress}
                 creditCard={creditCard}
               />
-              
             </Col>
           </Row>
+        </div>
       </Layout>
-    )
+    );
   }
 }
 
 Cart.propTypes = {
-  products: PropTypes.arrayOf(PropTypes.shape({
-    id: PropTypes.number.isRequired,
-    price: PropTypes.number.isRequired,
-    quantity: PropTypes.number.isRequired
-  })).isRequired,
+  products: PropTypes.arrayOf(
+    PropTypes.shape({
+      id: PropTypes.number.isRequired,
+      price: PropTypes.number.isRequired,
+      quantity: PropTypes.number.isRequired,
+    })
+  ).isRequired,
   total: PropTypes.string,
-  checkout: PropTypes.func
-}
+  checkout: PropTypes.func,
+};
 
-const mapStateToProps = state => ({
+const mapStateToProps = (state) => ({
   products: getCartProducts(state),
   total: getTotal(state),
   customer: getInfoCustomer(state),
   shippingAddress: getInfoShippingAddress(state),
-  creditCard: getInfoCreditCard(state)
-})
+  creditCard: getInfoCreditCard(state),
+});
 
-export default connect(
-  mapStateToProps,
-  { checkout }
-)(Cart)
+export default connect(mapStateToProps, { checkout })(Cart);

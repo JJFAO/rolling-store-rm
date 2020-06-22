@@ -10,7 +10,7 @@ export default class Main extends Component {
         return(
             <Layout>
                 <Content className="content">
-                <p style={{ color: "var(--primary)" }}> Basado en tu ultima visita</p>
+                <p style={{ color: "var(--primary)", margin:"1rem" }}> Basado en tu ultima visita</p>
                     <Row>
                         {
                         products.map(prod => (

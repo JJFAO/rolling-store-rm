@@ -7,24 +7,24 @@ class ProductsInCart extends Component {
   }
 
   render() {
-    const { products } = this.props;
-    // let products =[{
-    //   id: 2,
-    //   name:"Asdad",
-    //   brand:"asdas",
-    //   price: 3333,
-    //   quantity:2
-    // },
-    // {
-    //   id: 2,
-    //   name:"Asdad",
-    //   brand:"asdas",
-    //   price: 3333,
-    //   quantity:2
-    // }]
+    // const { products } = this.props;
+    let products =[{
+      id: 2,
+      name:"Asdad",
+      brand:"asdas",
+      price: 3333,
+      quantity:2
+    },
+    {
+      id: 2,
+      name:"Asdad",
+      brand:"asdas",
+      price: 3333,
+      quantity:2
+    }]
     return (
       <div className="productsIncart">
-        <h3>Productos en Carrito</h3>
+        <h3 style={{color: "var(--title)"}}>Productos en Carrito</h3>
         {products.map(({ name, brand, price, id, quantity }) => (
           <div style={{ margin: 20 }}>
             <Row>
@@ -36,10 +36,10 @@ class ProductsInCart extends Component {
                 />
               </Col>
               <Col xs={{span: 16}}>
-                <h3>
+                <h3 style={{color: "var(--text)"}} >
                   {name} {brand}
                 </h3>
-                <h6>
+                <h6 style={{color: "var(--primary)"}}>
                   subtotal: {quantity} x ${price} = ${quantity * price}{" "}
                 </h6>
               </Col>

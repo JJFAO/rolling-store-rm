@@ -16,42 +16,14 @@ class ProductInfo extends Component {
       id,
       description,
       shippingTime,
+      urls
     } = this.props.product;
     const { product, onAddToCartClicked } = this.props;
-
+    
     return (
       <Fragment>
         <div className="productInfo">
           <Row>
-            {/* <Col lg={{ span: 4 }}>
-              <div className="productInfo-images">
-                <img
-                  src={this.getPhoto(id)}
-                  className=""
-                  style={{ height: "12vh", width: "15vh" }}
-                  alt="product"
-                />
-                <img
-                  src={this.getPhoto(id)}
-                  className=""
-                  style={{ height: "12vh", width: "15vh" }}
-                  alt="product"
-                />
-                <img
-                  src={this.getPhoto(id)}
-                  className=""
-                  style={{ height: "12vh", width: "15vh" }}
-                  alt="product"
-                />
-                <img
-                  src={this.getPhoto(id)}
-                  className=""
-                  style={{ height: "12vh", width: "15vh" }}
-                  alt="product"
-                />
-              </div>
-            </Col> */}
-
             <Col xs={{ span: 24 }} lg={{ span: 8 }}>
               <div className="productInfo-imageContainer">
                 <img
@@ -66,20 +38,20 @@ class ProductInfo extends Component {
             <Col xs={{ span: 24 }} lg={{ span: 16 }}>
               <div className="productInfo-description">
                 <div>
-                  <h4>{name}</h4>
-                  <h6>{brand}</h6>
+                  <h4 style={{color: "var(--title)"}}>{name}</h4>
+                  <h6 style={{color: "var(--text)"}}>{brand}</h6>
                   <Row>
-                    <Col xs={{span: 24}} lg={{span: 6}}>
+                    <Col xs={{ span: 24 }} lg={{ span: 6 }}>
                       <p style={{ color: "var(--primary)" }}>
                         precio: {price}{" "}
                       </p>
                     </Col>
-                    <Col xs={{span: 24}} lg={{span: 8}}>
+                    <Col xs={{ span: 24 }} lg={{ span: 8 }}>
                       <p style={{ color: "var(--secondary)" }}>
                         llega en: {shippingTime}{" "}
                       </p>
                     </Col>
-                    <Col xs={{span: 24}} lg={{span: 8}}>
+                    <Col xs={{ span: 24 }} lg={{ span: 8 }}>
                       <Link
                         to={{
                           pathname: "/cart/",
@@ -105,12 +77,19 @@ class ProductInfo extends Component {
                 <br />
                 <div
                   style={{
-                    color: "var(--secondary)",
+                    color: "var(--text)",
                   }}
                 >
                   {description}
                 </div>
-                <br />
+                <Col>
+                  <div className="productInfo-images">
+                    <img src={urls.uno} alt="product" />
+                    <img src={urls.dos} alt="product" />
+                    <img src={urls.tres} alt="product" />
+                    <img src={urls.cuatro} alt="product" />
+                  </div>
+                </Col>
               </div>
             </Col>
           </Row>
