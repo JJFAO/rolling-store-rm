@@ -35,11 +35,11 @@ class ProductsInCart extends Component {
                   alt="product"
                 />
               </Col>
-              <Col xs={{span: 16}}>
-                <h3 style={{color: "var(--text)"}} >
+              <Col xs={{span: 12}}>
+                <h3 style={{color: "var(--text)", marginLeft:"2rem"}} >
                   {name} {brand}
                 </h3>
-                <h6 style={{color: "var(--primary)"}}>
+                <h6 style={{color: "var(--primary)",marginLeft:"2rem"}}>
                   subtotal: {quantity} x ${price} = ${quantity * price}{" "}
                 </h6>
               </Col>
