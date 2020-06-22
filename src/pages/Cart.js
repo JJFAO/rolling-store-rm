@@ -24,7 +24,7 @@ class Cart extends Component {
   }
 
   render() {
-    const { customer, shippingAddress, creditCard, products } = this.props;
+    const {  shippingAddress, creditCard, products } = this.props;
 
     return (
       <Layout>

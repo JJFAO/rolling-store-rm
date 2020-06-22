@@ -7,21 +7,21 @@ class ProductsInCart extends Component {
   }
 
   render() {
-    // const { products } = this.props;
-    let products =[{
-      id: 2,
-      name:"Asdad",
-      brand:"asdas",
-      price: 3333,
-      quantity:2
-    },
-    {
-      id: 2,
-      name:"Asdad",
-      brand:"asdas",
-      price: 3333,
-      quantity:2
-    }]
+    const { products } = this.props;
+    // let products =[{
+    //   id: 2,
+    //   name:"Asdad",
+    //   brand:"asdas",
+    //   price: 3333,
+    //   quantity:2
+    // },
+    // {
+    //   id: 2,
+    //   name:"Asdad",
+    //   brand:"asdas",
+    //   price: 3333,
+    //   quantity:2
+    // }]
     return (
       <div className="productsIncart">
         <h3 style={{color: "var(--title)"}}>Productos en Carrito</h3>
