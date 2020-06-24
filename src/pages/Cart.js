@@ -20,11 +20,12 @@ class Cart extends Component {
     this.state = {
       creditCard: "",
       shippingAddress: "",
+      customer:""
     };
   }
 
   render() {
-    const {  shippingAddress, creditCard, products } = this.props;
+    const {  shippingAddress, creditCard, products, customer } = this.props;
 
     return (
       <Layout>
@@ -40,6 +41,7 @@ class Cart extends Component {
               <CartDetails
                 shippingAddress={shippingAddress}
                 creditCard={creditCard}
+                customer={customer}
               />
             </Col>
           </Row>

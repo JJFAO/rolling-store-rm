@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import logo from "../logo.png";
 import withFirebaseAuth from "react-with-firebase-auth";
-
 import { Layout, Row, Col, Input, Button } from "antd";
 import { Redirect, Link } from "react-router-dom";
-
 import "firebase/auth";
 import { firebaseApp } from "../firebase";
 const { Header } = Layout;

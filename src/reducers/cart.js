@@ -17,7 +17,7 @@ const initialState = {
   quantityById: {},
   creditCard: '',
   shippingAddress: '',
-  customer: 'Ricky'
+  customer: ''
 }
 
 const addedIds = (state = initialState.addedIds, action) => {
@@ -75,7 +75,7 @@ case CHECKOUT_CART:
   const newState = {
     addedIds: state.addedIds,
     quantityById: state.quantityById,
-    customer: state.customer,
+    customer: action.payload.newCustomer,
     creditCard: action.payload.newCreditCard,
     shippingAddress: action.payload.newShippingAddress
   }
