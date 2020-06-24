@@ -15,6 +15,7 @@ import {
 import { firebaseApp } from './firebase';
 import { connect } from "react-redux";
 import { getVisibleProducts } from "./reducers/products";
+import Login from './auth/login';
 
 class App extends Component {
   constructor(props) {
@@ -81,6 +82,13 @@ class App extends Component {
         />
  
         <Switch>
+        <Route path="/login" 
+          render={props =>
+            <div className='App-container'>
+              <Login {...props} />
+            </div>
+          }>
+        </Route>
           <Route path="/results">
             <div className='App-container'>
               <Results

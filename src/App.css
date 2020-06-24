@@ -186,3 +186,44 @@
   }
 }
 /*-------------------------------------------------------------------*/
+.login{
+  background-color: var(--background);
+  text-align: center;
+}
+.login-header{
+  background-color: var(--secondary);
+  margin-top: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+@media screen and (min-width: 1000px) {
+  .login-header {
+    background-color: var(--secondary);
+    margin-top: 5rem;
+    margin-left:  30rem ;
+    margin-right:  30rem ;
+    margin-bottom: 0;
+    padding: 1rem;
+    /* padding: 2rem;
+    margin-right: 10rem; */
+  }
+}
+.login-content{
+  background-color: var(--title);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding: 2rem;
+
+}
+
+@media screen and (min-width: 1000px) {
+  .login-content {
+    background-color: var(--title);
+    margin-left:  30rem ;
+    margin-right:  30rem ;
+    min-height: 10rem;
+    padding: 1rem;
+    /* padding: 2rem;
+    margin-right: 10rem; */
+  }
+}

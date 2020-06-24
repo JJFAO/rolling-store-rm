@@ -19,6 +19,8 @@ class ProductInfo extends Component {
       urls
     } = this.props.product;
     const { product, onAddToCartClicked } = this.props;
+    console.log(this.props);
+    
     
     return (
       <Fragment>
