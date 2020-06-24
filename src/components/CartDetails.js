@@ -90,7 +90,7 @@ class CartDetails extends Component {
                 </Radio>
               </Radio.Group>
             </Form.Item>
-            <Form.Item wrapperCol={{ span: 12, offset: 6 }}>
+            <Form.Item wrapperCol={{ span: 12}}>
               <h2>Total: ${total}</h2>
               <Button
                 block
