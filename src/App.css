@@ -45,6 +45,11 @@
   color: var(--text) !important;
   background-color: var(--secondary) !important;
 }
+@media screen and (max-width: 500px) {
+  .header {
+    min-height: 8rem;
+    }
+}
 .header-logo {
   height: 60px;
   cursor: pointer !important;

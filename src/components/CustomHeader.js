@@ -84,7 +84,7 @@ class CustomHeader extends Component {
     return (
       <Header className="header">
         <Row>
-          <Col xs={{ span: 5 }} lg={{ span: 3 }}>
+          <Col xs={{ span: 8 }} lg={{ span: 3 }}>
             {this.renderRedirectToMain()}
             <Link to={{ pathname: "/" }}>
               <img
@@ -95,7 +95,7 @@ class CustomHeader extends Component {
               />
             </Link>
           </Col>
-          <Col xs={{ span: 19 }} lg={{ span: 15 }}>
+          <Col xs={{ span: 16 }} lg={{ span: 15 }}>
             <div className="header-search">
               {this.renderRedirectToResults()}
               <Search
@@ -117,7 +117,7 @@ class CustomHeader extends Component {
               )}
             </div>
           </Col>
-          <Col xs={{ span: 0 }} lg={{ span: 6 }}>
+          <Col xs={{ span: 24 }} lg={{ span: 6 }}>
             <div className="header-greetings">
               {user ? (
                 <div>
