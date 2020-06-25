@@ -102,7 +102,7 @@ class CartDetails extends Component {
                 }}
                 htmlType="submit"
               >
-                {this.state.redirect ? checkoutCart(shippingAddress, creditCard, customer) : console.log("no se viene")
+                {this.state.redirect ? checkoutCart(shippingAddress, creditCard, customer) : null
                 
                 }
                 Confirmar compra

@@ -11,7 +11,6 @@ const { Content } = Layout;
 class Login extends Component {
   render() {
     const { user, signOut, signInWithGoogle } = this.props;
-    console.log(this.props);
     
     return (
       <Layout>
